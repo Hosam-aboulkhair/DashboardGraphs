@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="IE=edge" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Title</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/components.css" rel="stylesheet" type="text/css">
+<link href="css/colors.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet">
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
+<!-- Theme JS files -->
+<script type="text/javascript" src="js/echarts/echarts.js"></script>
+<script type="text/javascript" src="js/lines_areas.js"></script>
+<script type="text/javascript" src="js/combinations-inventory.js"></script>
+<!-- /theme JS files -->
+
+<!--[if lt IE 9]>
+	    <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+</head>
+<body >
+<div class="wrapper right-content">
+    <div class="row">
+      <div class="col-sm-3 no-padding-left">
+        <div class="filter left">
+          <select class="form-control">
+            <option>all branches</option>
+            <option>cairo branch</option>
+            <option>tanta branch</option>
+            <option>alex branch</option>
+          </select>
+        </div>
+        <!--end filter--> 
+      </div>
+      <div class="col-sm-9 no-padding-right">
+        <div class="filter left">
+          <div class="col-sm-4 no-padding-left">
+            <input type="text" class="form-control date" placeholder="date from">
+          </div>
+          <div class="col-sm-4 no-padding-left">
+            <input type="text" class="form-control date" placeholder="date to">
+          </div>
+          <div class="col-sm-4 no-padding-left">
+            <button class="btn btn-primary">generate</button>
+          </div>
+        </div>
+        <!--end filter--> 
+      </div>
+    </div>
+    <!--end row-->
+    <div class="bodyContainer">
+      <div class="row">
+        <div class="col-md-12"> 
+          <div id="" class="">
+
+                  <!--Table details - Start-->
+                  <div class="row">
+                    <div class="col-sm-12 no-padding-left no-padding-right">
+                      <div class="header-chart-elements">
+                      <div class="col-sm-4 hchart-border-right">
+                        <div class="table-responsive ">
+                          <table class="table table-borderless ">
+                            <tbody>
+                              <tr>
+                                <td class="td-master">Stock In:</td>
+                                <td>235</td>
+                                <td class="right"><a class="glyphicon glyphicon-list-alt"  href="#" data-toggle="modal" data-target="#reportDetails"></a></td>
+                              </tr>
+                              <tr>
+                                <td class="td-master">Return +ve:</td>
+                                <td>1.00 %</td>
+                              </tr>
+                              <tr>
+                                <td class="td-master">Adjust. +ve: </td>
+                                <td>2.00 %</td>
+                                </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="col-sm-4 hchart-border-right" >
+                        <div class="table-responsive ">
+                          <table class="table table-borderless ">
+                            <tbody>
+                              <tr>
+                                <td class="td-master">Stock Out:</td>
+                                <td>235</td>
+                                <td class="right"><a class="glyphicon glyphicon-list-alt"  href="#" data-toggle="modal" data-target="#reportDetails"></a></td>
+                              </tr>
+                              <tr>
+                                <td class="td-master">Return -ve:</td>
+                                <td>1.00 %</td>
+                              </tr>
+                              <tr>
+                                <td class="td-master">Adjust. -ve: </td>
+                                <td>2.00 %</td>
+                                </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      <div class="col-sm-4">
+                        <div class="table-responsive ">
+                          <table class="table table-borderless ">
+                            <tbody>
+                              <tr>
+                                <td class="td-master">Expected Stock In:</td>
+                                <td>1</td>
+                                <td class="right"><a class="glyphicon glyphicon-list-alt"  href="#" data-toggle="modal" data-target="#reportDetails"></a></td>
+                              </tr>
+                              <tr>
+                                <td class="td-master">Stock In:</td>
+                                <td>8</td>
+                                <td class="right"><a class="glyphicon glyphicon-list-alt"  href="#" data-toggle="modal" data-target="#reportDetails"></a></td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- End Table details -->
+
+                  <div class="row">
+                  <!-- Stock Value Bar -->
+                    <div class="col-lg-6 no-padding-left">
+                      <div class="gragh-container">
+                        <!-- Line and bar combination -->
+                        <div class="panel panel-flat">
+                          <div class="panel-heading">
+                            <h5 class="panel-title left">Stock Value</h5>
+                            <a class="glyphicon glyphicon-eye-open right g-details"  href="#"></a>
+                            <div class="heading-elements">
+                            <ul class="icons-list">
+                              <li><a data-action="collapse"></a></li>
+                              <li><a data-action="reload"></a></li>
+                              <li><a data-action="close"></a></li>
+                             </ul>
+                            </div>
+                          </div>
+                          <div class="panel-body">
+                            <div class="chart-container">
+                              <div class="chart has-fixed-height" id="stockvalue_line_bar"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /line and bar combination -->
+                        <div class="table-responsive mainTable" >
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th> Periods </th>
+                                <th> Ret IN</th>
+                                <th> Ret Out </th>
+                                <th> Adj IN</th>
+                                <th> Adj Out </th>
+                                <th> Periods </th>
+                                <th> Ret IN</th>
+                                <th> Ret Out </th>
+                                <th> Adj IN</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td><span class="table-legend" style="background-color:#7100a1"></span>Previous Period</td>
+                                <td>69,823.13</td>
+                                <td>27,456.15</td>
+                                <td>.</td>
+                                <td>525.69</td>
+                                <td>69,823.13</td>
+                                <td>27,456.15</td>
+                                <td>.</td>
+                                <td>525.69</td>
+                              </tr>
+                              <tr>
+                                <td><span class="table-legend" style="background-color:#f37400"></span>Selected Period</td>
+                                <td>18,823.13</td>
+                                <td>8,456.15</td>
+                                <td>.</td>
+                                <td>793.45</td>
+                                <td>18,823.13</td>
+                                <td>8,456.15</td>
+                                <td>.</td>
+                                <td>793.45</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  <!-- End Stock Value Bar -->
+                  <!-- Right Table -->
+                    <div class="col-sm-6 no-padding-right">
+                      <div class="gragh-container">
+                        <div class="table-responsive mainTable" >
+                          <table class="table table-striped">
+                            <thead>
+                              <tr>
+                                <th> Item </th>
+                                <th> On Hand Value</th>
+                                <th> Last Transaction Date </th>
+                                <th> Last Transaction Date </th>
+                                <th> On Hand Value</th>
+                                <th> Item </th>
+                                <th> On Hand Value </th>
+                                <th> Item</th>
+                                <th> On Hand Value </th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <td>Sunar Potato</td>
+                                <td>53,130</td>
+                                <td>10/20/2016</td>
+                                <td>Sunar Potato</td>
+                                <td>53,130</td>
+                                <td>10/20/2016</td>
+                                <td>Sunar Potato</td>
+                                <td>53,130</td>
+                                <td>10/20/2016</td>
+                              </tr>
+                              <tr>
+                                <td>Sunar Dextrin (M90) White</td>
+                                <td>29,762.48</td>
+                                <td>10/20/2016</td>
+                                <td>Sunar Potato</td>
+                                <td>53,130</td>
+                                <td>10/20/2016</td>
+                                <td>Sunar Potato</td>
+                                <td>53,130</td>
+                                <td>10/20/2016</td>
+                              </tr>
+                              <tr>
+                                <td>Cevolit DM 1340</td>
+                                <td>94,332.27</td>
+                                <td>05/13/2016</td>
+                                <td>Sunar Potato</td>
+                                <td>53,130</td>
+                                <td>10/20/2016</td>
+                                <td>Sunar Potato</td>
+                                <td>53,130</td>
+                                <td>10/20/2016</td>
+                              </tr>
+                              <tr>
+                                <td>PER CLEAN BW (75gm)</td>
+                                <td>2,767.08</td>
+                                <td>09/30/2016</td>
+                                <td>Sunar Potato</td>
+                                <td>53,130</td>
+                                <td>10/20/2016</td>
+                                <td>Sunar Potato</td>
+                                <td>53,130</td>
+                                <td>10/20/2016</td>
+                              </tr>
+                              <tr>
+                                <td>PARFIX 3406 CA (50gm)</td>
+                                <td>88,536.77</td>
+                                <td>10/06/2016</td>
+                                <td>Sunar Potato</td>
+                                <td>53,130</td>
+                                <td>10/20/2016</td>
+                                <td>Sunar Potato</td>
+                                <td>53,130</td>
+                                <td>10/20/2016</td>
+                              </tr>
+                              <tr>
+                                <td>Sunar Potato</td>
+                                <td>5,825.63</td>
+                                <td>10/19/2016</td>
+                                <td>Sunar Potato</td>
+                                <td>53,130</td>
+                                <td>10/20/2016</td>
+                                <td>Sunar Potato</td>
+                                <td>53,130</td>
+                                <td>10/20/2016</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                  <!-- End Right Table -->
+                  </div>
+
+                  <div class="row">
+                  <!-- Inventory chart -->
+                    <div class="col-sm-12 no-padding-left no-padding-right">
+                      <div class="gragh-container">
+                        <!-- Inventory Stacked line chart -->
+                        <div class="panel panel-flat">
+                          <div class="panel-heading">
+                            <h5 class="panel-title">Inventory</h5>
+                            <div class="heading-elements">
+                              <ul class="icons-list">
+                                <li><a data-action="collapse"></a></li>
+                                <li><a data-action="reload"></a></li>
+                                <li><a data-action="close"></a></li>
+                              </ul>
+                            </div>
+                          </div>
+
+                          <div class="panel-body">
+                            <div class="chart-container">
+                              <div class="chart has-fixed-height" id="inventoryv_stacked_lines"></div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- /stacked line chart -->
+                      </div>
+                    </div>
+                  <!-- End Inventory chart -->
+                  </div>
+          </div>
+        </div>
+      </div>
+      <div class="row"> </div>
+    </div>
+  <!--end right-content--> 
+</div>
+
+
+<!-- Start - Report Model -->
+<div class="modal fade" id="reportDetails" role="dialog">
+  <div class="modal-dialog modal-lg"> 
+    
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close closeModel" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Report Title</h4>
+      </div>
+      <div class="modal-body">
+        <div class="col-xs-12 no-padding-left">
+       
+          <div class="gragh-container">
+                      <div class="panel panel-flat">
+                        <div class="panel-heading">
+                          <h5 class="panel-title left">Stock Value</h5>
+                         
+                          <div class="heading-elements">
+                            <ul class="icons-list">
+                              <li><a data-action="collapse"></a></li>
+                              <li><a data-action="reload"></a></li>
+                              <li><a data-action="close"></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="panel-body">
+                          <div class="chart-container">
+                            <div class="chart has-fixed-height" id="stockvalue_line_bar1"></div>
+                          </div>
+                        </div>
+                      </div>
+                  
+                    </div>
+        </div>
+             <div class="col-xs-12 no-padding-left">
+   
+          <div class="gragh-container">
+                      <div class="panel panel-flat">
+                        <div class="panel-heading">
+                          <h5 class="panel-title left">Stock Value</h5>
+                         
+                          <div class="heading-elements">
+                            <ul class="icons-list">
+                              <li><a data-action="collapse"></a></li>
+                              <li><a data-action="reload"></a></li>
+                              <li><a data-action="close"></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="panel-body">
+                          <div class="chart-container">
+                            <div class="chart has-fixed-height" id="stockvalue_line_bar2"></div>
+                          </div>
+                        </div>
+                      </div>
+                  
+                    </div>
+        </div>
+             <div class="col-xs-12 no-padding-left">
+      
+          <div class="gragh-container">
+                      <div class="panel panel-flat">
+                        <div class="panel-heading">
+                          <h5 class="panel-title left">Stock Value</h5>
+                          
+                          <div class="heading-elements">
+                            <ul class="icons-list">
+                              <li><a data-action="collapse"></a></li>
+                              <li><a data-action="reload"></a></li>
+                              <li><a data-action="close"></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="panel-body">
+                          <div class="chart-container">
+                            <div class="chart has-fixed-height" id="stockvalue_line_bar3"></div>
+                          </div>
+                        </div>
+                      </div>
+                  
+                    </div>
+        </div>
+              <div class="col-xs-12 no-padding-left">
+      
+          <div class="gragh-container">
+                      <div class="panel panel-flat">
+                        <div class="panel-heading">
+                          <h5 class="panel-title left">Stock Value</h5>
+                         
+                          <div class="heading-elements">
+                            <ul class="icons-list">
+                              <li><a data-action="collapse"></a></li>
+                              <li><a data-action="reload"></a></li>
+                              <li><a data-action="close"></a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="panel-body">
+                          <div class="chart-container">
+                            <div class="chart has-fixed-height" id="stockvalue_line_bar4"></div>
+                          </div>
+                        </div>
+                      </div>
+                  
+                    </div>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- End - Report Model -->
+</body>
+</html>

@@ -1,0 +1,310 @@
+/******************************************************GENERAL*************************************/
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 100%;
+	font-size: 100%;
+	outline: none;
+	list-style: none;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 12px;
+	text-decoration: none;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+html {
+}
+label, .label {
+	text-transform: capitalize;
+	font-weight: normal;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.clear {
+	clear: both;
+}
+.row {
+	margin: 0;
+}
+.form-control {
+	border-radius: 0;
+	font-size: 12px;
+	padding: 0 0 0 5px;
+	height: 22px;
+	text-transform: capitalize;
+}
+.check-label {
+	line-height: 11px;
+}
+.check-label input {
+	margin: 0 2px 0 0;
+}
+textarea.form-control {
+	resize: none;
+}
+.btn-primary {
+	background: #20a8d8;
+	color: #fff !important;
+	min-width: 100px;
+	font-size: 12px;
+	line-height: 8px;
+	text-decoration: none !important;
+}
+.btn-primary:hover, .btn-primary:focus {
+	background: #d86120;
+}
+.no-padding-left {
+	padding-left: 0;
+	padding-right: 8px;
+}
+.no-padding-right {
+	padding-right: 0;
+	padding-left: 8px;
+}
+.no-margin-bottom {
+	margin-bottom: 0px;
+}
+.wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+.bodyContainer {
+	overflow: auto;
+	padding-bottom: 15px;
+}
+/*********************************************** Charts **********************************************/
+.gragh-container {
+	margin-bottom: 15px;
+	-webkit-box-shadow: 0px 0px 3px rgba(102, 102, 102, 0.5);
+	box-shadow: 0px 0px 3px rgba(102, 102, 102, 0.5);
+	padding: 8px;
+}
+.gragh-container .panel-title {
+	margin: 10px 0 10px 0;
+	text-transform: capitalize;
+	color: #507d9e;
+	font-size: 14px;
+}
+.gragh-container .panel-body
+{
+	overflow: auto;
+}
+
+
+/******************************************************TABLES*************************************/
+.filter {
+	background: #253341;
+	padding: 15px;
+	width: 100%;
+	margin-bottom: 30px;
+}
+.table-responsive {
+	border: none !important;
+	margin-bottom: 15px;
+}
+.table {
+	margin-bottom: 0px;
+}
+.table th {
+	text-transform: capitalize;
+}
+.table > thead > tr > th, .table > tbody > tr > th, .table > tfoot > tr > th, .table > thead > tr > td, .table > tbody > tr > td, .table > tfoot > tr > td {
+	border: none;
+	padding: 10px 8px;
+	vertical-align: inherit;
+}
+.table > tfoot {
+	background-color: #00acda;
+	color: #fff;
+}
+.table-striped > thead > tr:first-child {
+	background: none !important;
+	border-bottom: 1px solid #20a8d8;
+}
+.table-striped tr {
+	border-bottom: 1px solid #dbecfc;
+}
+.table-striped > tbody > tr:nth-of-type(even) {
+	background: #dbecfc;
+}
+.table-striped > tbody > tr:nth-of-type(odd) {
+	background: none;
+}
+.table a {
+	color: #20a8d8;
+	transition: all 0.4s;
+	-webkit-transition: all 0.4s;
+	-moz-transition: all 0.4s;
+	-o-transition: all 0.4s;
+	-ms-transition: all 0.4s;
+}
+.table a:hover, .table a:focus {
+	color: #253341;
+}
+.table .glyphicon {
+	font-size: 15px;
+	vertical-align: middle;
+	padding-right: 5px;
+}
+.table .glyphicon.up {
+	color: #34e43c;
+}
+.table .glyphicon.down {
+	color: #e01a0c;
+}
+.table .glyphicon:hover, .table .glyphicon:focus {
+	text-decoration: none;
+}
+.tableDetails {
+	margin-bottom: 0px;
+}
+.tableDetails {
+	/*    border-width: 1px 1px 5px 1px;
+    border-style: solid;
+    border-color: #253341;*/
+	border-bottom: 5px solid #23566f;
+	border-collapse: collapse;
+}
+.tableDetails thead {
+	color: #01366b !important;
+}
+.tableDetails thead tr th {
+	color: #033261 !important;
+}
+.tableDetails > tbody > tr td:first-child {
+/*background: #daedfc;*/
+}
+.tableDetails tr {
+	border: 1px solid #c7e3f9;
+}
+.tableDetails > thead > tr:first-child {
+	border-bottom: 1px solid #253341;
+}
+.tableDetails.table > tbody > tr > th, .tableDetails.table > tbody > tr > td {
+	color: #565656;
+	padding: 5px 8px;
+}
+.tableDetails > tbody > tr:nth-of-type(odd) {
+	background: #fff;
+}
+.tableDetails > tbody > tr:nth-of-type(even) {
+	background: #f5f5f5;
+}
+.tableDetails a {
+	color: #014990;
+}
+.tableDetails tr {
+	border: 1px solid #eee;
+}
+table tr.selectedRow {
+	background: #90d2e4 !important;
+	color: #000;
+}
+.tableDetails.table tr.selectedRow {
+	background: #ccc !important;
+	color: #000;
+}
+.gragh-container .g-details
+{
+font-size: 15px;
+text-decoration: none;
+}
+.table .table-legend
+{
+display: block;
+width: 22px;
+height: 15px;
+border-radius:3px;
+margin-right: 5px;
+float: left
+}
+
+/************************* Header Chart Elements *************************/
+.header-chart-elements {
+	background-color: #dbecfc;
+	padding: 10px 0;
+	display: -webkit-box;
+	border: 1px solid #d4dee6;
+	webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+	overflow: auto;
+}
+.header-chart-elements .table-responsive {
+	margin-bottom: 0;
+}
+.header-chart-elements .table > tbody > tr > td {
+	padding: 5px 8px;
+	white-space: nowrap;
+}
+.td-master {
+	color: #507d9e;
+	font-weight: bold;
+}
+.hchart-border-left {
+	border-left: 1px solid #adc0d2;
+}
+.hchart-border-right {
+	border-right: 1px solid #adc0d2;
+}
+.header-chart-elements  .selectedRow
+{
+    background: #dbecfc !important;
+}
+
+
+/******************************************************MEDIA*************************************/
+@media screen and (max-width: 1001px) and (min-width: 992px) {
+.material-item a.block {
+	min-height: 205px;
+}
+}
+
+@media screen and (max-width: 991px) {
+.material-item {
+	padding: 0px 0px !important;
+}
+}
+
+
+@media screen and (max-width: 767px) {
+.tabsContainer2 ul.nav li a {
+	margin-bottom: 2px;
+}
+.tabsContainer2 ul.nav li.active a::after {
+	display: none;
+}
+.login-block {
+	width: 100%;
+}
+.left-col .footer {
+	width: 100%;
+	left: 0;
+	z-index: 500;
+	position: fixed;
+	bottom: 0;
+}
+.right-content {
+	padding-bottom: 40px;
+}
+.no-padding-left, .no-padding-right {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+.filter {
+	margin-bottom: 10px;
+}
+.filter .form-control {
+	margin-bottom: 10px;
+}
+
+
+
+}
+

@@ -1,0 +1,92 @@
+@font-face {
+  font-family: 'mine';
+  src: url('../fonts/mine.eot?78512057');
+  src: url('../fonts/mine.eot?78512057#iefix') format('embedded-opentype'),
+       url('../fonts/mine.woff2?78512057') format('woff2'),
+       url('../fonts/mine.woff?78512057') format('woff'),
+       url('../fonts/mine.ttf?78512057') format('truetype'),
+       url('../fonts/mine.svg?78512057#mine') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'mine';
+    src: url('../font/mine.svg?78512057#mine') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "mine";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+ 
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Font smoothing. That was taken from TWBS */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-all-in-one-item-inquiry:before { content: '\e800'; } /* '' */
+.icon-all-performance-indicators:before { content: '\e801'; } /* '' */
+.icon-cash-flow:before { content: '\e802'; } /* '' */
+.icon-cash-on-hand:before { content: '\e803'; } /* '' */
+.icon-customer-trial-balance:before { content: '\e804'; } /* '' */
+.icon-gl-trial-balance:before { content: '\e805'; } /* '' */
+.icon-hospital-map:before { content: '\e806'; } /* '' */
+.icon-indicator:before { content: '\e807'; } /* '' */
+.icon-inpatients-statistics:before { content: '\e808'; } /* '' */
+.icon-inventory-performance:before { content: '\e809'; } /* '' */
+.icon-job-costing:before { content: '\e80a'; } /* '' */
+.icon-net-salaries:before { content: '\e80b'; } /* '' */
+.icon-net-salaries2:before { content: '\e80c'; } /* '' */
+.icon-nurse-stations:before { content: '\e80d'; } /* '' */
+.icon-nurse-stations2:before { content: '\e80e'; } /* '' */
+.icon-obligations:before { content: '\e80f'; } /* '' */
+.icon-others:before { content: '\e810'; } /* '' */
+.icon-outpatients-statistics:before { content: '\e811'; } /* '' */
+.icon-outstanding-receivables:before { content: '\e812'; } /* '' */
+.icon-planning-performance:before { content: '\e813'; } /* '' */
+.icon-planning-performance2:before { content: '\e814'; } /* '' */
+.icon-procurement-performance:before { content: '\e815'; } /* '' */
+.icon-production-lines-status:before { content: '\e816'; } /* '' */
+.icon-production-performance:before { content: '\e817'; } /* '' */
+.icon-profile:before { content: '\e818'; } /* '' */
+.icon-reorder-point:before { content: '\e819'; } /* '' */
+.icon-revenue:before { content: '\e81a'; } /* '' */
+.icon-sales-performance:before { content: '\e81b'; } /* '' */
+.icon-sales-value:before { content: '\e81c'; } /* '' */
+.icon-scientific-degree:before { content: '\e81d'; } /* '' */
+.icon-stock-status-report:before { content: '\e81e'; } /* '' */
+.icon-termination-report:before { content: '\e81f'; } /* '' */
+.icon-vacant-positions:before { content: '\e820'; } /* '' */
+.icon-sales-remaining-value:before { content: '\e821'; } /* '' */
+.icon-min-and-max-reorder-point:before { content: '\e822'; } /* '' */
